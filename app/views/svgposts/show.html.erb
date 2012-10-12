@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @svgpost.content %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @svgpost.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_svgpost_path(@svgpost) %> |
+<%= link_to 'Back', svgposts_path %>

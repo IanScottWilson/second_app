@@ -1,0 +1,25 @@
+<h1>Listing svgposts</h1>
+
+<table>
+  <tr>
+    <th>Content</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @svgposts.each do |svgpost| %>
+  <tr>
+    <td><%= svgpost.content %></td>
+    <td><%= svgpost.user_id %></td>
+    <td><%= link_to 'Show', svgpost %></td>
+    <td><%= link_to 'Edit', edit_svgpost_path(svgpost) %></td>
+    <td><%= link_to 'Destroy', svgpost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Svgpost', new_svgpost_path %>
